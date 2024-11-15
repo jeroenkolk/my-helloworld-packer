@@ -21,7 +21,7 @@ jobs:
         uses: buildpacks/github-actions/setup-pack@v5.0.0
       - name: Build and publish OCI image
         run: |
-          pack build jeroenkolk/my-helloworld-packer/tst:latest \
+          pack build jeroenkolk/my-helloworld-packer:latest \
             -B paketobuildpacks/builder-jammy-base \
             --env "BP_WEB_SERVER=nginx" \
             --env "BP_WEB_SERVER_ROOT=dist" \
